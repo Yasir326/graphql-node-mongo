@@ -5,7 +5,7 @@ const graphqlResolvers = require('./graphql/resolvers');
 const { mongo } = require('mongoose');
 
 const app = express();
-const PORT = 3000 || process.env.PORT;
+const PORT = 5000 || process.env.PORT;
 
 app.use(
   '/graphql',
@@ -21,10 +21,9 @@ const options = { useNewUrlParser: true, useUnifiedTopology: true };
 mongo
   .connect(uri, options)
   .then(() =>
-    app.listen(PORT, () => console.log(`Server is running on PORT:${3000}`))
+    app.listen(PORT, () => console.log(`Server is running on PORT:${PORT}`))
   )
   .catch((error) => {
     throw error;
   });
 
-app.listen(PORT, () => console.log(`Server is running on localhost:${3000}`));
