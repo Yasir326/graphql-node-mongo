@@ -1,7 +1,8 @@
 # graphql-node-mongo
 
-This is a little test (graphql)[https://graphql.org/] api built on top of [Node](https://nodejs.org/en/)
+This is a little test [graphql](https://graphql.org/) api built on top of [Node](https://nodejs.org/en/)
 and [Express](https://expressjs.com/) in order to get a better understanding of how Graphql works
+![](https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif)
 
 ## Getting Started
 
