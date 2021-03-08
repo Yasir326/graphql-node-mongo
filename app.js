@@ -18,12 +18,8 @@ app.use(
 
 const uri = process.env.MONGO_URI;
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
-mongoose
-  .connect(uri, options)
-  .then(() =>
-    app.listen(PORT, () => console.log(`Server is running on PORT:${PORT}`))
-  )
-  .catch((error) => {
-    throw error;
-  });
+mongoose.connect(uri, options).catch((error) => {
+  throw error;
+});
 
+app.listen(PORT, () => console.log(`Server is running on PORT:${PORT}`));
