@@ -6,7 +6,7 @@ module.exports = {
       const articlesFetched = await Article.find();
       return articlesFetched.map((article) => {
         return {
-          ...article.doc,
+          ...article._doc,
           _id: article.id,
           createdAt: new Date(article._doc.createdAt).toISOString(),
         };

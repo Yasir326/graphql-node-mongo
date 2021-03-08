@@ -1,7 +1,7 @@
 const { buildSchema } = require('graphql');
 
-module.exports = buildSchema(
-  `
+module.exports = buildSchema(`
+
     type Article {
         _id: ID!
         title: String!
@@ -9,13 +9,14 @@ module.exports = buildSchema(
         createdAt: String!
     }
 
+
     input ArticleInput {
         title: String!
         body: String!
     }
 
     type Query {
-        articles: [Article!]
+        articles:[Article!]
     }
 
     type Mutation { 
@@ -25,6 +26,5 @@ module.exports = buildSchema(
     schema {    
         query: Query
         mutation: Mutation
-    }
-    `
-);
+    }  
+    `);
